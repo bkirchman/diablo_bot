@@ -16,13 +16,12 @@ from diablo_bot.registries import build_command_registry, build_detector_registr
 DEFAULT_REPLAY_DIR = Path("frames/replay")
 DEFAULT_LOOPS_YAML = Path("configs/loops/farm_v1.yaml")
 
-# TODO: Replace with tuned HSV detector values from scripts/tune_indicator.py output.
 FISHING_TEMPLATE_HSV_CONFIG: Mapping[str, Any] = {
-    "hue_range": (0, 0),
-    "saturation_min": 0,
-    "value_min": 0,
-    "pixel_threshold": 0,
-    "roi": (0, 0, 1, 1),
+    "hue_range": (73, 84),
+    "saturation_min": 95,
+    "value_min": 100,
+    "pixel_threshold": 7,
+    "roi": (899, 217, 120, 120),
 }
 
 

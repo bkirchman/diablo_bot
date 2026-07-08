@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/diablo_bot/__init__.py
+src/diablo_bot/registries.py
+src/diablo_bot.egg-info/PKG-INFO
+src/diablo_bot.egg-info/SOURCES.txt
+src/diablo_bot.egg-info/dependency_links.txt
+src/diablo_bot.egg-info/requires.txt
+src/diablo_bot.egg-info/top_level.txt

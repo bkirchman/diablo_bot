@@ -9,7 +9,7 @@ from framework.contrib.detection import ColorMatchDetector
 BUTTON_A_INDEX = 1
 
 # TODO: Replace with verified move hold duration in milliseconds.
-TBD_MS = 0
+TBD_MS = 100
 
 
 def build_command_registry() -> CommandRegistry:
