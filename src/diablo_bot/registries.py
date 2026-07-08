@@ -6,7 +6,7 @@ from framework.contrib.content_loops import CommandRegistry, DetectorRegistry
 from framework.contrib.detection import ColorMatchDetector
 
 # TODO: Verify against firmware mapping for this rig.
-BUTTON_A_INDEX = 0
+BUTTON_A_INDEX = 1
 
 # TODO: Replace with verified move hold duration in milliseconds.
 TBD_MS = 0
@@ -16,7 +16,7 @@ def build_command_registry() -> CommandRegistry:
     registry = CommandRegistry()
 
     # v2.1 firmware commands are single-packet with self-release durations.
-    registry.register("dpad_up", lambda: {"hat_x": 0, "hat_y": -1, "hat_duration": 80})
+    registry.register("dpad_up", lambda: {"hat_x": 0, "hat_y": 1, "hat_duration": 80})
     registry.register("move_left", lambda: {"move_x": -80, "move_y": 0, "move_duration": TBD_MS})
     registry.register(
         "press_a",

@@ -71,6 +71,8 @@ def main() -> None:
             iterations += 1
     except IndexError:
         print("Replay ended before farm_v1 completed; add more replay frames and try again.")
+    except KeyboardInterrupt:
+        print("Replay interrupted by user.")
     finally:
         loop.stop()
 
