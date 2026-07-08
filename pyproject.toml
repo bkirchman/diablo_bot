@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diablo_bot"
+version = "0.1.0"
+description = "Diablo 4 fishing farm bot game knowledge and loop configs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "bot_framework",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

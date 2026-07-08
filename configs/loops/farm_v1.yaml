@@ -1,0 +1,27 @@
+loops:
+  setup_sequence:
+    steps:
+      # TODO: tune hat_duration after in-game verification.
+      - command: dpad_up
+      # TODO: tune move_duration (TBD_MS constant) after stick timing validation.
+      - command: move_left
+      # TODO: tune button duration in registries.py if needed.
+      - command: press_a
+
+  collect_loot:
+    steps:
+      - repeat:
+          count: 8
+          steps:
+            - command: press_a
+            - wait: 0.3
+
+  farm_v1:
+    steps:
+      - call: setup_sequence
+      - wait_visual:
+          detector: drop_indicator
+          timeout: 15.0
+          on_timeout: abort
+      - command: fire_trigger
+      - call: collect_loot
